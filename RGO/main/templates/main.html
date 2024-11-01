@@ -1,0 +1,40 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% static 'common-header.css' %}">
+  <link rel="stylesheet" href="{% static 'community.css' %}">
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="{% url 'main' %}">판곡 포럼</a>
+    </h1>
+  </header>
+  
+  <nav>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">로그아웃</a>
+    <a href="{% url 'board' %}">게시판</a>
+    {% else %}
+    <a href="{%url 'signup'%}">회원가입</a>
+    <a href="{% url 'login' %}">로그인</a>
+    {% endif %}
+  </nav>
+
+  <div class="container">
+    <h2>판곡 포럼에 오신 것을 환영합니다.</h2>
+  </div>
+
+  <img src="static/pangok.png" alt="판곡고등학교 로고" width="400" height="400">
+  
+  <footer>
+    <p>&copy;2024 PYGRAM</p>
+  </footer>
+</body>
+</html>
