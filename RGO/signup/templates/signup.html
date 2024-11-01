@@ -19,7 +19,7 @@
 <body>
   <header>
     <h1>
-      <a href="{% url 'main' %}">판곡 포럼</a>
+      <a href="{% url 'main' %}">케어링크</a>
     </h1>
   </header>
 
@@ -37,15 +37,17 @@
     <h2>회원 가입</h2>
     <form action="{% url 'signup' %}" method="POST">
       {% csrf_token %}
-      <input type="text" id="student_id" name="student_id" placeholder="학번" required>
-      <input type="text" id="name" name="name" placeholder="이름" required>
-      <input type="password" id="password" name="password" placeholder="비밀번호" required>
+      <input type="text" name="name" id="name" placeholder="이름" maxlength="4" required>
+      <input type="text" name="call_number" id="call_number" placeholder="전화번호" inputmode="numeric" maxlength="11" title="전화번호는 11자리 숫자로 입력해주세요." required>
+      <input type="text" name="birthday" id="birthday" placeholder="생년월일 6자리" inputmode="numeric" maxlength="6" title="생년월일은 6자리 숫자로 입력해주세요." required>
+      <input type="text" name="id" id="id" placeholder="아이디" required>
+      <input type="password" name="password" id="password" placeholder="비밀번호" required>
       <button type="submit">회원 가입</button>
     </form>
   </div>
 
   <footer>
-    <p>&copy; 2024 PYGRAM</p>
+    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev </p>
   </footer>
   
   {% if messages %}

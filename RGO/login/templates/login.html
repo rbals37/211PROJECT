@@ -19,7 +19,7 @@
 <body>
   <header>
     <h1>
-      <a href="{% url 'main' %}">판곡 포럼</a>
+      <a href="{% url 'main' %}">케어링크</a>
     </h1>
   </header>
 
@@ -37,14 +37,14 @@
     <h2>로그인</h2>
     <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
-      <input type="text" name="student_id" id="student_id" placeholder="학번" maxlength="5" required>
+      <input type="text" name="id" id="id" placeholder="아이디" required>
       <input type="password" name="password" id="password" placeholder="비밀번호" required>
       <button type="submit">로그인</button>
     </form>
   </div>
 
   <footer>
-    <p>&copy; 2024 PYGRAM</p>
+    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev </p>
   </footer>
 
   {% if messages %}
