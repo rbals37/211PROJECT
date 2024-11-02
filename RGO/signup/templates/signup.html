@@ -26,7 +26,6 @@
   <nav>
     {% if user.is_authenticated %}
       <a href="{% url 'logout' %}">로그아웃</a>
-      <a href="{% url 'board' %}">게시판</a>
     {% else %}
       <a href="{% url 'signup' %}">회원가입</a>
       <a href="{% url 'login' %}">로그인</a>
@@ -38,9 +37,9 @@
     <form action="{% url 'signup' %}" method="POST">
       {% csrf_token %}
       <input type="text" name="name" id="name" placeholder="이름" maxlength="4" required>
-      <input type="text" name="call_number" id="call_number" placeholder="전화번호" inputmode="numeric" maxlength="11" title="전화번호는 11자리 숫자로 입력해주세요." required>
-      <input type="text" name="birthday" id="birthday" placeholder="생년월일 6자리" inputmode="numeric" maxlength="6" title="생년월일은 6자리 숫자로 입력해주세요." required>
-      <input type="text" name="id" id="id" placeholder="아이디" required>
+      <input type="text" name="phone_number" id="phone_number" placeholder="전화번호" inputmode="numeric" maxlength="11" title="전화번호는 11자리 숫자로 입력해주세요." required>
+      <input type="text" name="birth_date" id="birth_date" placeholder="생년월일 8자리(YYYY-MM-DD)" inputmode="numeric" maxlength="10"  title="생년월일은 8자리 숫자로 입력해주세요." required>
+      <input type="text" name="user_id" id="user_id" placeholder="아이디" required>
       <input type="password" name="password" id="password" placeholder="비밀번호" required>
       <button type="submit">회원 가입</button>
     </form>

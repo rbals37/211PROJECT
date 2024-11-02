@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -5,23 +6,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>케어링크</title>
+  <title>커뮤니티</title>
   <link rel="stylesheet" href="{% static 'common-header.css' %}">
   <link rel="stylesheet" href="{% static 'community.css' %}">
-  <link rel="stylesheet" href="{% static 'main.css' %}">
-
 </head>
 <body>
   <header>
     <h1>
-      <a href="{% url 'main' %}">케어링크</a>
+      <a href="{% url 'main' %}">판곡 포럼</a>
     </h1>
   </header>
   
   <nav>
     {% if user.is_authenticated %}
     <a href="{% url 'logout' %}">로그아웃</a>
-    <a href="{% url 'board' %}">게시판</a>
     {% else %}
     <a href="{%url 'signup'%}">회원가입</a>
     <a href="{% url 'login' %}">로그인</a>
@@ -32,9 +30,10 @@
     <h2>케어링크에 오신 것을 환영합니다.</h2>
   </div>
 
-  <img src="static/carelink.png" alt="케어링크 로고" width="400" height="400">  
+  <img src="static/carelink.png" alt="케어링크 로고" width="400" height="400">
+  
   <footer>
-    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev </p>
+    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
   </footer>
 </body>
 </html>

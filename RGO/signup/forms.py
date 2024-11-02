@@ -1,12 +1,14 @@
 from django import forms
 from .models import CustomUser
+import datetime 
 
 class CustomSignupForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
         model = CustomUser
-        fields = ['student_id', 'name', 'password']  # 학번, 이름, 비밀번호만 받음
+        fields = ['name', 'phone_number', 'birth_date', 'user_id', 'password']  # 이름, 전화번호, 생년월일, 아이디, 비밀번호
+
 
     def save(self, commit=True):
         user = super().save(commit=False)

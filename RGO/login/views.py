@@ -9,17 +9,17 @@ from signup.models import CustomUser
 
 def login_view(request):
     if request.method == 'POST':
-        student_id = request.POST.get('student_id')
+        user_id = request.POST.get('user_id')
         password = request.POST.get('password')
 
         try:
-            user = CustomUser.objects.get(student_id=student_id)
+            user = CustomUser.objects.get(user_id=user_id)
         except CustomUser.DoesNotExist:
-            messages.error(request, '잘못된 학번입니다.')
+            messages.error(request, '잘못된 아이디입니다.')
             return redirect('login')
         
         
-        user = authenticate(request, student_id=student_id, password=password)
+        user = authenticate(request, user_id=user_id, password=password)
         if user is not None:
             auth_login(request, user)
             return redirect('main')
