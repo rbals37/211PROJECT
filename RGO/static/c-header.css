@@ -12,8 +12,15 @@ header, nav {
   background-color: #333;
 }
 
-nav {
+.signup {
   background-color: #444;
+  padding: 10px;
+  text-align: right;
+}
+
+.navigation {
+  background-color: #ffc8cb;
+  padding: 10px;
 }
 
 a {
