@@ -1,0 +1,45 @@
+header {
+  padding: 10px;
+  text-align: left;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc8cb;
+}
+
+.logo {
+  margin-right: 10px;
+  display: block;
+}
+
+.signup {
+  padding: 10px;
+}
+
+.signup a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navigation {
+  background-color: #fb8eff;
+  padding: 10px;
+  text-align: center;
+}
+
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
