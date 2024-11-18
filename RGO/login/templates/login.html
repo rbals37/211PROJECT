@@ -14,24 +14,13 @@
   <link rel="stylesheet" href="{% static 'c-header.css' %}">
   <link rel="stylesheet" href="{% static 'c-container.css' %}">
   <link rel="stylesheet" href="{% static 'c-button.css' %}">
+  <link rel="stylesheet" href="{% static 'c-nav.css' %}">
+  <link rel="stylesheet" href="{% static 'c-body.css' %}">
   <link rel="icon" href="static/favicon.png" type="image/png">
 </head>
 
 <body>
-  <header>
-    <h1>
-      <a href="{% url 'main' %}">케어링크</a>
-    </h1>
-  </header>
-
-  <nav>
-    {% if user.is_authenticated %}
-      <a href="{% url 'logout' %}">로그아웃</a>
-    {% else %}
-      <a href="{% url 'signup' %}">회원가입</a>
-      <a href="{% url 'login' %}">로그인</a>
-    {% endif %}
-  </nav>
+  {% include "header.html" %}
 
   <div class="container">
     <h2>로그인</h2>

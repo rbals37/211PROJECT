@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'main',
     'login',
     'signup',
+    'mypage',
 
     #Third party apps
     'django_extensions',
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'RGO.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

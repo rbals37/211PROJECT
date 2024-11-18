@@ -1,37 +1,29 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-header, nav {
+header {
   padding: 10px;
-  color: #fff;
-  background-color: #333;
+  text-align: left;
 }
 
-.signup {
-  background-color: #444;
-  padding: 10px;
-  text-align: right;
-}
-
-.navigation {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ffc8cb;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo {
+  margin-right: 10px;
+  display: block;
+}
+
+p {
+  color: #000000;
+  text-decoration: none;
   padding: 10px;
 }
-
-a {
-  color: #fff;
-  text-decoration: none;
-  padding: 15px;
-}
-
-main h2, main a, main ul, main li, main p, main form {
-  color: inherit;
-  text-align: inherit;
-  padding: 0;
-  background-color: transparent;
-  border: none;}
