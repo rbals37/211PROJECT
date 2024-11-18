@@ -15,12 +15,17 @@
 
   {% include 'header.html' %}
   <div class="contain">
-    <h1>마이페이지</h1>
-    <p>이름: {{ user.name }}</p>
-    <p>아이디: {{ user.user_id }}</p>
-    <p>전화번호: {{ user.phone_number }}</p>
-    <p>생년월일: {{ user.birth_date }}</p>
-    <a href="{% url 'edit' %}">정보 수정하기</a>
+    <h1>정보 수정</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>이름:</label>
+        <input type="text" name="name" value="{{ user.name }}"><br>
+        <label>전화번호:</label>
+        <input type="text" name="phone_number" value="{{ user.phone_number }}"><br>
+        <label>생년월일:</label>
+        <input type="date" name="birth_date" value="{{ user.birth_date }}"><br>
+        <button type="submit">저장</button>
+    </form>
   </div>
 
   <img src="{% static 'avocado.png' %}" alt="아보카도 친구">

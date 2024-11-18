@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.mypage, name='mypage'),
+    path('edit/', views.mypage, name='edit'),
 ]
