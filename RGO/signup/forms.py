@@ -1,6 +1,6 @@
 from django import forms
 from .models import CustomUser
-import datetime 
+
 
 class CustomSignupForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
