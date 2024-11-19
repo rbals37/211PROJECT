@@ -14,7 +14,7 @@ header a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffc8cb;
+  background-color: #b2d49f;
 }
 
 .logo {
@@ -22,10 +22,10 @@ header a {
 }
 
 .signup {
-  margin-right: 0px;
+  margin-right: 10px;
 }
 
 .navigation {
-  background-color: #fed4ff;
+  background-color: #dabdad;
   padding: 10px;
 }

@@ -9,12 +9,15 @@
   <link rel="icon" href="static/favicon.png" type="image/png">
   <link rel="stylesheet" href="{% static 'body.css' %}">
   <link rel="stylesheet" href="{% static 'header.css' %}">
+  <link rel="stylesheet" href="{% static 'container.css' %}">
+  <link rel="stylesheet" href="{% static 'button.css' %}">
+
 </head>
 
 <body>
 
   {% include 'header.html' %}
-  <div class="contain">
+  <div class="container">
     <h1>정보 수정</h1>
     <form method="post">
         {% csrf_token %}
@@ -27,8 +30,6 @@
         <button type="submit">저장</button>
     </form>
   </div>
-
-  <img src="{% static 'avocado.png' %}" alt="아보카도 친구">
 
   <footer>
     <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
