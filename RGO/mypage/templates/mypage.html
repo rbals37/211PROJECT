@@ -9,23 +9,24 @@
   <link rel="icon" href="static/favicon.png" type="image/png">
   <link rel="stylesheet" href="{% static 'body.css' %}">
   <link rel="stylesheet" href="{% static 'header.css' %}">
+  <link rel="stylesheet" href="{% static 'container.css' %}">
+  <link rel="stylesheet" href="{% static 'button.css' %}">
 </head>
 
 <body>
   {% include 'header.html' %}
-  <div class="contain">
+  <div class="container">
     <h1>마이페이지</h1>
     <p>이름: {{ user.name }}</p>
     <p>아이디: {{ user.user_id }}</p>
     <p>전화번호: {{ user.phone_number }}</p>
     <p>생년월일: {{ user.birth_date }}</p>
-    <a href="{% url 'edit' %}">정보 수정하기</a>
+    <button><a href="{% url 'edit' %}">정보 수정하기</a></button>
   </div>
 
-  <img src="{% static 'avocado.png' %}" alt="아보카도 친구" width="300px" height="300px">
 
   <footer>
-    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
+    <p class="footer">&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
   </footer>
 </body>
 </html>

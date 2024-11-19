@@ -6,7 +6,7 @@ class UserEditForm(forms.ModelForm):
 
     class Meta:
         model = CustomUser
-        fields = ['name', 'phone_number', 'birth_date', 'user_id']  
+        fields = ['name', 'phone_number', 'birth_date', 'user_id']
 
     def clean_password(self):
         return self.instance.password
