@@ -6,6 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>케어링크</title>
+  <script>
+    function showAlert(message) {
+      alert(message);
+    }
+  </script>
   <link rel="icon" href="static/favicon.png" type="image/png">
   <link rel="stylesheet" href="{% static 'body.css' %}">
   <link rel="stylesheet" href="{% static 'header.css' %}">
@@ -24,9 +29,9 @@
         <label>이름:</label>
         <input type="text" name="name" value="{{ user.name }}"><br>
         <label>전화번호:</label>
-        <input type="text" name="phone_number" value="{{ user.phone_number }}"><br>
-        <label>생년월일:</label>
-        <input type="date" name="birth_date" value="{{ user.birth_date }}"><br>
+        <input type="text" name="phone_number" value="{{ user.phone_number}}"><br>
+        <label>아이디:</label>
+        <input type="text" name="user_id" value="{{ user.user_id }}"><br>
         <button type="submit">저장</button>
     </form>
   </div>
@@ -34,5 +39,14 @@
   <footer>
     <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
   </footer>
+
+  {% if messages %}
+  <script>
+    {% for message in messages %}
+      showAlert("{{ message }}");
+    {% endfor %}
+  </script>
+  {% endif %}
+
 </body>
 </html>
