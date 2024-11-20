@@ -1,11 +1,15 @@
 {% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'body.css' %}">
+  <link rel="stylesheet" href="{% static 'header.css' %}">
+</head>
 <div class="header">
   <header>
     <a href="{% url 'main' %}">
       <img src="{% static 'favicon.png' %}" alt="로고" class="logo" width="40" height="40">
     케어링크</a>
   </header>
-  <nav class="signup">
+  <nav class="header-account">
     {% if user.is_authenticated %}
     <a href="{% url 'logout' %}">로그아웃</a>
     {% else %}
