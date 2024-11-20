@@ -1,11 +1,10 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>케어링크</title>
+  <title>정보수정</title>
   <script>
     function showAlert(message) {
       alert(message);
@@ -17,10 +16,9 @@
   <link rel="stylesheet" href="{% static 'container.css' %}">
   <link rel="stylesheet" href="{% static 'button.css' %}">
 </head>
-
 <body>
-  {% include 'header.html' %}
-  <div class="container">
+  {% include 'c.header.html' %}
+  <div class="mypage">
     <h1>정보 수정</h1>
     <form method="post">
         {% csrf_token %}
@@ -33,11 +31,9 @@
         <button type="submit">저장</button>
     </form>
   </div>
-
   <footer>
     <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
   </footer>
-
   {% if messages %}
   <script>
     {% for message in messages %}
@@ -45,6 +41,5 @@
     {% endfor %}
   </script>
   {% endif %}
-
 </body>
 </html>

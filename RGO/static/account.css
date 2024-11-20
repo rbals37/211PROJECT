@@ -1,6 +1,6 @@
-/* 공통 스타일 */
+/* 일단 어카운트 css는 이걸로 고정 */
 
-.container {
+.account {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
