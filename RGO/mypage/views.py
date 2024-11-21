@@ -26,10 +26,12 @@ def edit_mypage(request):
             if current_password and new_password:
                     if not user.check_password(current_password):
                         form.add_error('current_password', "현재 비밀번호가 올바르지 않습니다.")
+                        messages.error(request, '잘못된 입력값 입니다.')
+                        return render(request, 'edit_mypage.html', {'form': form})
                     else:
                         user.set_password(new_password)  # 비밀번호 해싱
                         update_session_auth_hash(request, user)  # 세션 유지
-            
+
             user.save()
             return redirect('mypage')
         
