@@ -19,11 +19,11 @@
   </div>
   {% include 'footer.html' %}
   {% if messages %}
-    <script>
-      {% for message in messages %}
-        showAlert("{{ message }}");
-      {% endfor %}
-    </script>
+  <script>
+    {% for message in messages %}
+      alert("{{ message }}");
+    {% endfor %}
+  </script>
   {% endif %}
 </body>
 </html>
