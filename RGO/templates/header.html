@@ -1,0 +1,58 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'body.css' %}">
+  <link rel="stylesheet" href="{% static 'header.css' %}">
+  <link rel="stylesheet" href="{% static 'account.css' %}">
+  <link rel="stylesheet" href="{% static 'mypage.css' %}">
+  <link rel="stylesheet" href="{% static 'button.css' %}">
+  <link rel="icon" href="{% static 'favicon.ico' %}">
+</head>
+<div class="header">
+  <header>
+    <a href="{% url 'main' %}">
+      <img src="{% static 'favicon.png' %}" alt="로고" class="logo" width="40" height="40">
+    케어링크</a>
+  </header>
+  <nav class="header-account">
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">로그아웃</a>
+    {% else %}
+    <a href="{%url 'signup'%}">회원가입</a>
+    <a href="{% url 'login' %}">로그인</a>
+    {% endif %}
+  </nav>
+</div>
+{% if user.is_authenticated %}
+  <nav class="navigation">
+    <a href="{% url 'mypage' %}">
+      <img src="{% static 'nav-test.png' %}" alt="마이페이지">
+      <span>마이페이지</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-test.png' %}" alt="캐시현황">
+      <span>캐시현황</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-test.png' %}" alt="스토어">
+      <span>스토어</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-friends.png' %}" alt="친구">
+      <span>친구</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-community.png' %}" alt="커뮤니티">
+      <span>커뮤니티</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-test.png' %}" alt="나의기록">
+      <span>나의기록</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-test.png' %}" alt="그룹미션">
+      <span>그룹미션</span>
+    </a>
+  </nav>
+{% endif %}

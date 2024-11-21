@@ -1,17 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>케어링크</title>
-  <link rel="icon" href="static/favicon.png" type="image/png">
 </head>
 <body>
-  {% include 'c.header.html' %}
+  {% include 'header.html' %}
   <img src="{% static 'avocado.png' %}" alt="아보카도 친구" width="550" height="550">
-  <footer>
-    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
-  </footer>
+  {% include 'footer.html' %}
 </body>
 </html>

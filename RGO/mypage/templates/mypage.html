@@ -1,16 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>마이페이지</title>
-  <link rel="icon" href="static/favicon.png" type="image/png">
-  <link rel="stylesheet" href="{% static 'mypage.css' %}">
-  <link rel="stylesheet" href="{% static 'button.css' %}">
 </head>
 <body>
-  {% include 'c.header.html' %}
+  {% include 'header.html' %}
   <div class="mypage">
     <h1>마이페이지</h1>
     <p>이름: {{ user.name }}</p>
@@ -19,8 +13,6 @@
     <p>생년월일: {{ user.birth_date }}</p>
     <button><a href="{% url 'edit' %}">정보 수정하기</a></button>
   </div>
-  <footer>
-    <p class="footer">&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
-  </footer>
+  {% include 'footer.html' %}
 </body>
 </html>

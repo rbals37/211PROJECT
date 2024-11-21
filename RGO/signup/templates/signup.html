@@ -1,21 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ko">
 <head>  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
   <script>
     function showAlert(message) {
       alert(message);  
     }
   </script>
-  <link rel="icon" href="static/favicon.png" type="image/png">
-  <link rel="stylesheet" href="{% static 'account.css' %}">
-  <link rel="stylesheet" href="{% static 'button.css' %}">
 </head>
 <body>
-  {% include "c.header.html" %}
+  {% include "header.html" %}
   <div class="account">
     <h2>회원 가입</h2>
     <form action="{% url 'signup' %}" method="POST">
@@ -28,9 +22,7 @@
       <button type="submit">회원 가입</button>
     </form>
   </div>
-  <footer>
-    <p>&copy;2학년 11반 진로 프로젝트 Medic + dev </p>
-  </footer>
+  {% include 'footer.html' %}
   {% if messages %}
     <script>
       {% for message in messages %}
