@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,19 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>케어링크</title>
   <link rel="icon" href="static/favicon.png" type="image/png">
-  <link rel="stylesheet" href="{% static 'body.css' %}">
-  <link rel="stylesheet" href="{% static 'header.css' %}">
 </head>
-
 <body>
-
-  {% include 'header.html' %}
-  <div class="contain">
-    <h2>안효빈이 안해줌^^</h2>
-  </div>
-
+  {% include 'c.header.html' %}
   <img src="{% static 'avocado.png' %}" alt="아보카도 친구" width="550" height="550">
-
   <footer>
     <p>&copy;2학년 11반 진로 프로젝트 Medic + dev</p>
   </footer>

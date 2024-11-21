@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>  
@@ -12,16 +11,12 @@
     }
   </script>
   <link rel="icon" href="static/favicon.png" type="image/png">
-  <link rel="stylesheet" href="{% static 'body.css' %}">
-  <link rel="stylesheet" href="{% static 'header.css' %}">
-  <link rel="stylesheet" href="{% static 'container.css' %}">
+  <link rel="stylesheet" href="{% static 'account.css' %}">
   <link rel="stylesheet" href="{% static 'button.css' %}">
 </head>
-
 <body>
-  {% include "header.html" %}
-
-  <div class="container">
+  {% include "c.header.html" %}
+  <div class="account">
     <h2>회원 가입</h2>
     <form action="{% url 'signup' %}" method="POST">
       {% csrf_token %}
@@ -33,11 +28,9 @@
       <button type="submit">회원 가입</button>
     </form>
   </div>
-
   <footer>
     <p>&copy;2학년 11반 진로 프로젝트 Medic + dev </p>
   </footer>
-  
   {% if messages %}
     <script>
       {% for message in messages %}
@@ -45,6 +38,5 @@
       {% endfor %}
     </script>
   {% endif %}
-  
 </body>
 </html>
