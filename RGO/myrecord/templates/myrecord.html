@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <title>마이페이지</title>
+</head>
+<body>
+  {% include 'header.html' %}
+  <div class="mypage">
+    <h1>마이페이지</h1>
+    <p>이름: {{ user.name }}</p>
+    <p>아이디: {{ user.user_id }}</p>
+    <p>전화번호: {{ user.phone_number }}</p>
+    <p>생년월일: {{ user.birth_date }}</p>
+    <button><a href="{% url 'edit' %}">정보 수정하기</a></button>
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>
