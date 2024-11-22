@@ -23,4 +23,5 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('signup/', include('signup.urls')),
     path('mypage/', include('mypage.urls')),
+    path('myrecord/', include('myrecord.urls')),
 ]
