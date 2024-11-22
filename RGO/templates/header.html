@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'body.css' %}">
   <link rel="stylesheet" href="{% static 'header.css' %}">
   <link rel="stylesheet" href="{% static 'account.css' %}">
@@ -26,7 +27,7 @@
 {% if user.is_authenticated %}
   <nav class="navigation">
     <a href="{% url 'mypage' %}">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'nav-mypage.png' %}">
       <span>마이페이지</span>
     </a>
     <a href="#">
