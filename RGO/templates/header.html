@@ -27,31 +27,31 @@
 {% if user.is_authenticated %}
   <nav class="navigation">
     <a href="{% url 'mypage' %}">
-      <img src="{% static 'nav-mypage.png' %}">
+      <img src="{% static 'mypage.png' %}">
       <span>마이페이지</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'cash.png' %}">
       <span>캐시현황</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'store.png' %}">
       <span>스토어</span>
     </a>
-    <a href="#">
-      <img src="{% static 'nav-friends.png' %}">
-      <span>친구</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-community.png' %}">
-      <span>커뮤니티</span>
-    </a>
     <a href="{% url 'myrecord' %}">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'myrecord.png' %}">
       <span>나의기록</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'friends.png' %}">
+      <span>친구</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'community.png' %}">
+      <span>커뮤니티</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'mission.png' %}">
       <span>그룹미션</span>
     </a>
   </nav>
