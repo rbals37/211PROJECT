@@ -8,13 +8,13 @@
   <div class="form">
     <h1>정보 수정</h1>
     <form method="post">
-        {% csrf_token %}
-        <input name="name" value="{{ user.name }}"placeholder="이름">
-        <input name="phone_number" value="{{ user.phone_number}}" placeholder="전화번호">
-        <input name="user_id" value="{{ user.user_id }}" placeholder="아이디">
-        <input type="password" name="current_password" placeholder="현재 비밀번호">
-        <input type="password" name="new_password" placeholder="새 비밀번호">
-        <button type="submit">저장</button>
+      {% csrf_token %}
+      <input name="name" value="{{ user.name }}"placeholder="이름">
+      <input name="phone_number" value="{{ user.phone_number}}" placeholder="전화번호">
+      <input name="user_id" value="{{ user.user_id }}" placeholder="아이디">
+      <input type="password" name="current_password" placeholder="현재 비밀번호">
+      <input type="password" name="new_password" placeholder="새 비밀번호">
+      <button type="submit">저장</button>
     </form>
   </div>
   {% include 'footer.html' %}
