@@ -1,12 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
   color: #000000;
   padding: 10px;
+  display: inline-block;
 }
 
-header a {
+.header-account {
   display: flex;
-  align-items: center;
+  gap: 10px;
+}
+
+.header-account a {
+  color: #000;
+  padding: 10px;
 }
 
 .header {
@@ -16,41 +30,51 @@ header a {
   background-color: #b2d49f;
 }
 
-.logo {
-  margin-right: 10px;
+.header a {
+  display: flex;
+  align-items: center;
 }
 
-.header-account {
+.logo, .header-account {
   margin-right: 10px;
 }
 
 .navigation {
-  background-color: #dabdad;
-  align-items: center;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
   width: 100%;
+  height: 80px;
+  background-color: #dabdad;
+  gap: 5px;
 }
 
 .navigation a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 57px;
+  height: 50px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation a:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.navigation a:active {
+  transform: scale(0.8);
 }
 
 .navigation a img {
   width: 30px;
   height: 30px;
-  margin-bottom: 5px;
-  transition: transform 0.3s ease;
 }
 
 .navigation a span {
-  font-size: 12px;
-}
-
-.navigation a img:hover {
-  transform: scale(1.2);
-  cursor: pointer;
+  font-size: 13px;
+  margin-top: 5px;
 }

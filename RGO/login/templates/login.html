@@ -5,12 +5,12 @@
 </head>
 <body>
   {% include "header.html" %}
-  <div class="account">
-    <h2>로그인</h2>
+  <div class="form">
+    <h1>로그인</h1>
     <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
-      <input type="text" name="user_id" id="user_id" placeholder="아이디" required>
-      <input type="password" name="password" id="password" placeholder="비밀번호" required>
+      <input name="user_id" placeholder="아이디" required>
+      <input name="password" placeholder="비밀번호" type="password" required>
       <button type="submit">로그인</button>
     </form>
   </div>

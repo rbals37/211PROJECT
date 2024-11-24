@@ -1,20 +1,17 @@
-/* 버튼도 페이지별로 수정하면 좋을듯 */
-/* 정보수정 페이지 a 태그 문제잇음 */
-
 button {
   width: 100%;
   padding: 10px;
   background-color: #fff;
   border: 1px solid #000;
   color: #000;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #aaa;
+  background-color: #bbb;
 }
 
 button:active {

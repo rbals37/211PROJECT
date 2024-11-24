@@ -5,20 +5,15 @@
 </head>
 <body>
   {% include 'header.html' %}
-  <div class="mypage">
+  <div class="form">
     <h1>정보 수정</h1>
     <form method="post">
         {% csrf_token %}
-        <label>이름:</label>
-        <input type="text" name="name" value="{{ user.name }}"><br>
-        <label>전화번호:</label>
-        <input type="text" name="phone_number" value="{{ user.phone_number}}"><br>
-        <label>아이디:</label>
-        <input type="text" name="user_id" value="{{ user.user_id }}"><br>
-        <label>현재 비밀번호:</label>
-        <input type="password" name="current_password"><br>
-        <label>새 비밀번호:</label>
-        <input type="password" name="new_password"><br>
+        <input name="name" value="{{ user.name }}"placeholder="이름">
+        <input name="phone_number" value="{{ user.phone_number}}" placeholder="전화번호">
+        <input name="user_id" value="{{ user.user_id }}" placeholder="아이디">
+        <input type="password" name="current_password" placeholder="현재 비밀번호">
+        <input type="password" name="new_password" placeholder="새 비밀번호">
         <button type="submit">저장</button>
     </form>
   </div>
