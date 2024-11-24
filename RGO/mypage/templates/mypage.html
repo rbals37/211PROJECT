@@ -11,7 +11,7 @@
     <p>아이디 : {{ user.user_id }}</p>
     <p>전화번호 : {{ user.phone_number }}</p>
     <p>생년월일 : {{ user.birth_date }}</p>
-    <a href="{% url 'edit' %}"><button>정보 수정하기</button></a>
+    <a href="{% url 'edit' %}">정보 수정하기</a>
   </div>
   {% include 'footer.html' %}
 </body>

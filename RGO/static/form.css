@@ -27,7 +27,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 }
 button:hover {
   background-color: #bbb;
@@ -35,4 +35,5 @@ button:hover {
 button:active {
   background-color: #000;
   color: #fff;
+  transform: scale(0.9);
 }
