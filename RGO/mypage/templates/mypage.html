@@ -7,10 +7,10 @@
   {% include 'header.html' %}
   <div class="form">
     <h1>마이페이지</h1>
-    <p>이름: {{ user.name }}</p>
-    <p>아이디: {{ user.user_id }}</p>
-    <p>전화번호: {{ user.phone_number }}</p>
-    <p>생년월일: {{ user.birth_date }}</p>
+    <p>이름 : {{ user.name }}</p>
+    <p>아이디 : {{ user.user_id }}</p>
+    <p>전화번호 : {{ user.phone_number }}</p>
+    <p>생년월일 : {{ user.birth_date }}</p>
     <a href="{% url 'edit' %}"><button>정보 수정하기</button></a>
   </div>
   {% include 'footer.html' %}
