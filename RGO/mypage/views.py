@@ -3,10 +3,8 @@ from django.contrib import messages
 from .forms import UserEditForm 
 from signup.models import CustomUser
 from django.contrib.auth import update_session_auth_hash
-import time
 
 def mypage(request):
-    time.sleep(5)
     return render(request,'mypage.html')
 
 def edit_mypage(request):
