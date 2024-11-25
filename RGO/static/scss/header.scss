@@ -99,5 +99,8 @@ a {
     &:nth-child(4) img {
       transform: translateX(3px);
     }
+    &.active {
+      background-color: rgba(0, 0, 0, 0.07); /* 배경색만 추가 */
+    }
   }
 }

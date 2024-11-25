@@ -53,3 +53,17 @@
     </a>
   </nav>
 {% endif %}
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.navigation a');
+    links.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+</script>
