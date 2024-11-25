@@ -5,13 +5,13 @@
 </head>
 <body>
   {% include 'header.html' %}
-  <div class="mypage">
+  <div class="form">
     <h1>마이페이지</h1>
-    <p>이름: {{ user.name }}</p>
-    <p>아이디: {{ user.user_id }}</p>
-    <p>전화번호: {{ user.phone_number }}</p>
-    <p>생년월일: {{ user.birth_date }}</p>
-    <button><a href="{% url 'edit' %}">정보 수정하기</a></button>
+    <p>이름 : {{ user.name }}</p>
+    <p>아이디 : {{ user.user_id }}</p>
+    <p>전화번호 : {{ user.phone_number }}</p>
+    <p>생년월일 : {{ user.birth_date }}</p>
+    <a href="{% url 'edit' %}">정보 수정하기</a>
   </div>
   {% include 'footer.html' %}
 </body>

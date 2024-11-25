@@ -25,3 +25,4 @@ urlpatterns = [
     path('mypage/', include('mypage.urls')),
     path('myrecord/', include('myrecord.urls')),
 ]
+

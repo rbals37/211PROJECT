@@ -1,21 +1,18 @@
 {% load static %}
+{% load sass_tags %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="{% static 'favicon.ico' %}">
-  <link rel="stylesheet" href="{% static 'body.css' %}">
-  <link rel="stylesheet" href="{% static 'header.css' %}">
-  <link rel="stylesheet" href="{% static 'account.css' %}">
-  <link rel="stylesheet" href="{% static 'mypage.css' %}">
-  <link rel="stylesheet" href="{% static 'button.css' %}">
+  <link rel="stylesheet" href="{% sass_src 'scss/header.scss' %}"/>
+  <link rel="stylesheet" href="{% sass_src 'scss/form.scss' %}">
 </head>
 <div class="header">
   <header>
     <a href="{% url 'main' %}">
-      <img src="{% static 'logo.png' %}" class="logo" width="40" height="40">
+      <img src="{% static 'logo.png' %}" class="account" width="40" height="40">
     케어링크</a>
   </header>
-  <nav class="header-account">
+  <nav class="account">
     {% if user.is_authenticated %}
     <a href="{% url 'logout' %}">로그아웃</a>
     {% else %}
@@ -27,31 +24,31 @@
 {% if user.is_authenticated %}
   <nav class="navigation">
     <a href="{% url 'mypage' %}">
-      <img src="{% static 'nav-mypage.png' %}">
+      <img src="{% static 'nav-icon/mypage.png' %}">
       <span>마이페이지</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'nav-icon/cash.png' %}">
       <span>캐시현황</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'nav-icon/store.png' %}">
       <span>스토어</span>
     </a>
-    <a href="#">
-      <img src="{% static 'nav-friends.png' %}">
-      <span>친구</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-community.png' %}">
-      <span>커뮤니티</span>
-    </a>
     <a href="{% url 'myrecord' %}">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'nav-icon/myrecord.png' %}">
       <span>나의기록</span>
     </a>
     <a href="#">
-      <img src="{% static 'nav-test.png' %}">
+      <img src="{% static 'nav-icon/friends.png' %}">
+      <span>친구</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-icon/community.png' %}">
+      <span>커뮤니티</span>
+    </a>
+    <a href="#">
+      <img src="{% static 'nav-icon/mission.png' %}">
       <span>그룹미션</span>
     </a>
   </nav>
