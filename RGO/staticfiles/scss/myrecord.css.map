@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "myrecord.css",
+	"sources": [
+		"myrecord.scss"
+	],
+	"names": [],
+	"mappings": ";AAAA,iBAAiB"
+}

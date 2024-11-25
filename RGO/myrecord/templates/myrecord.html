@@ -1,7 +1,9 @@
 {% load static %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <head>
   <title>나의기록</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
   {% include 'header.html' %}

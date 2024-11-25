@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #Third party apps
     'django_extensions',
+    'sass_processor',
     
     #Django apps
     'django.contrib.admin',
@@ -48,6 +49,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+import os
+SASS_OUTPUT_STYLE = 'compact'
+SASS_PROCESSOR_ENABLED = True
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+
+# 배포용
+STATICFILES_FINDERS  = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +140,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
