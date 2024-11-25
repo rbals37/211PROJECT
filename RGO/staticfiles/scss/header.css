@@ -6,23 +6,25 @@ html, body { margin: 0; padding: 0; text-align: center; text-decoration: none; o
 
 ::-webkit-scrollbar { display: none; }
 
-a { text-decoration: none; color: #000; font-size: 13px; padding: 10px; display: inline-block; }
+a { text-decoration: none; color: #000; font-size: 13px; padding: 7px; display: inline-block; }
 
-.header { display: flex; justify-content: space-between; align-items: center; background-color: #b2d49f; }
+.header { display: flex; justify-content: space-between; background-color: #b2d49f; }
 
 .header a { display: flex; align-items: center; font-size: 16px; }
 
 .account { margin-right: 10px; display: flex; }
 
-.navigation { display: flex; justify-content: center; align-items: center; width: 100%; height: 80px; background-color: #dabdad; gap: 5px; }
+.navigation { display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background-color: #dabdad; gap: 5px; }
 
-.navigation a { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 57px; height: 50px; border-radius: 10px; transition: background-color 0.3s, transform 0.3s; }
+.navigation a { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
 
 .navigation a:hover { background-color: rgba(0, 0, 0, 0.1) !important; cursor: pointer; }
 
-.navigation a:active { transform: scale(0.8); }
+.navigation a:active { transform: scale(0.85); }
 
 .navigation a img { width: 30px; height: 30px; }
+
+.navigation a span { margin-top: 5px; }
 
 .navigation a:nth-child(1) img { transform: translateX(1px); }
 
