@@ -12,7 +12,6 @@ def calendar_view(request, year= None, month = None):
 
     cal = calendar.HTMLCalendar(firstweekday=6)  # 일요일이 시작
     calendar_html = cal.formatmonth(year, month)
-
     posts = None
     posts_by_date = {}
     posts = Post.objects.filter(created_at__year=year, created_at__month=month, author=request.user)
