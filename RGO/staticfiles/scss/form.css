@@ -1,20 +1,11 @@
-@charset "UTF-8";
-.form { padding: 20px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* 사면 전체에 그림자 적용 */ border-radius: 20px; width: 300px; margin: 40px auto; }
+.form { padding: 20px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); border-radius: 20px; width: 300px; margin: 50px auto; }
 
-.form a { background-color: #eee; border-radius: 10px; transition: background-color 0.3s, transform 0.3s; }
+.form form { flex-direction: column; text-align: left; }
 
-.form a:hover { background-color: #ccc; cursor: pointer; }
+.form input, .form p, .form button, .form a { width: 100%; border: 0px; padding: 12px; margin-top: 20px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; font-size: 16px; box-sizing: border-box; display: block; transition: transform 0.3s; }
 
-.form a:active { transform: scale(0.8); background-color: #000; color: #fff; }
+.form button, .form a { background-color: #000000; color: #ffffff; cursor: pointer; }
 
-.form form { display: flex; flex-direction: column; text-align: left; }
-
-.form input { padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; }
-
-.form button { width: 100%; padding: 10px; background-color: #fff; border: 1px solid #000; color: #000; border-radius: 10px; cursor: pointer; font-size: 16px; transition: background-color 0.3s, transform 0.3s; }
-
-.form button:hover { background-color: #bbb; }
-
-.form button:active { background-color: #000; color: #fff; transform: scale(0.9); }
+.form button:active, .form a:active { transform: scale(0.9); }
 
 /*# sourceMappingURL=form.css.map */
