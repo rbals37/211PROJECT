@@ -12,6 +12,8 @@ def calendar_view(request, year= None, month = None):
 
     cal = calendar.HTMLCalendar(firstweekday=6)  # 일요일이 시작
     calendar_html = cal.formatmonth(year, month)
+    calendar_html = calendar_html.replace(f'<caption>{calendar.month_name[month]}</caption>', ' ')
+
 
     posts = None
     posts_by_date = {}
@@ -30,7 +32,8 @@ def calendar_view(request, year= None, month = None):
     }
     return render(request, 'myrecord.html', context)
 
-
+def record_by_date(request, date):
+    return render(request, 'record_by_date.html')
 
 
 
