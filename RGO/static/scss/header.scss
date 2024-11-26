@@ -4,11 +4,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
 * {
   font-family: 'SejongGeulggot', sans-serif;
 }
-
 html, body {
   margin: 0;
   padding: 0;
@@ -17,36 +15,44 @@ html, body {
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
-
 a {
   text-decoration: none;
   color: #000;
   font-size: 13px;
-  padding: 7px;
   display: inline-block;
+  padding: 7px;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #b2d49f;
-  a {
+  div {
     display: flex;
-    align-items: center;
-    font-size: 16px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #000;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 10px;
+      transition: background-color 0.2s, transform 0.2s;;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      &:active {
+        transform: scale(0.85);
+      }
+    }
   }
 }
-
-.account {
-  margin-right: 10px;
-  display: flex;
-}
-
-.navigation {
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,8 +70,8 @@ a {
     border-radius: 10px;
     transition: background-color 0.2s, transform 0.2s;
     &:hover {
-      background-color: rgba(0, 0, 0, 0.1)!important;
       cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.1)!important;
     }
     &:active {
       transform: scale(0.85);
