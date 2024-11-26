@@ -3,30 +3,14 @@
 <!DOCTYPE html>
 <head>
   <title>나의기록</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
   <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
   {% include 'header.html' %}
-
-    <meta charset="UTF-8">
-    <title>나의 기록 캘린더</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 5px;
-        }
-        .has-posts {
-            background-color: #ffefd5; /* 글이 있는 날짜 강조 */
-        }
-    </style>
     <h1>{{ year }}년 {{ month }}월</h1>
 
-    <div>
+    <div class="calendar">
         {{ calendar_html|safe }} <!-- HTMLCalendar 출력 -->
     </div>
 

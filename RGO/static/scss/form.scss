@@ -1,38 +1,30 @@
 .form {
-  background-color: #fff;
   padding: 20px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
   width: 300px;
-  margin: 40px auto;
+  margin: 50px auto;
   form {
-    display: flex;
     flex-direction: column;
     text-align: left;
   }
-  input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  button {
+  input, p, button, a {
     width: 100%;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 12px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    &:hover {
-      background-color: #bbb;
-    }
+    box-sizing: border-box;
+    display: block;
+    transition: transform 0.3s;
+  }
+  button, a {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
     &:active {
-      background-color: #000;
-      color: #fff;
       transform: scale(0.9);
     }
   }
