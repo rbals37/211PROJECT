@@ -2,10 +2,10 @@
 
 .form form { flex-direction: column; text-align: left; }
 
-.form input, .form p, .form button, .form a { width: 100%; padding: 12px; margin-top: 20px; border: 0; border-radius: 10px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); font-size: 16px; box-sizing: border-box; display: block; transition: transform 0.3s; }
+.form input, .form p, .form button, .form a { width: 100%; padding: 13px; margin-top: 20px; border: 0; border-radius: 10px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); font-size: 16px; box-sizing: border-box; display: block; transition: transform 1.5s; }
 
 .form button, .form a { background-color: #000; color: #fff; cursor: pointer; }
 
-.form button:active, .form a:active { transform: scale(0.9); }
+.form button:active, .form a:active { transform: scale(0.00001) rotate(9000deg); transform-origin: left top; }
 
 /*# sourceMappingURL=form.css.map */
