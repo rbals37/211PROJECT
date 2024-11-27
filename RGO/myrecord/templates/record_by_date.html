@@ -8,8 +8,7 @@
 </head>
 <body>
   {% include 'header.html' %}
-  <h1>{{year}}년 {{month}}월 {{day}}일 의 기록</h1>
-
+  <h1>{{year}}년 {{month}}월 {{day}}일의 기록</h1>
   {% if posts %}
       <ul>
           {% for post in posts %}
@@ -22,7 +21,6 @@
   {% else %}
       <p>해당 날짜에 작성된 기록이 없습니다.</p>
   {% endif %}
-  
   {% include 'footer.html' %}
 </body>
 </html>
