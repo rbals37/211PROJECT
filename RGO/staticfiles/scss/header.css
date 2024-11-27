@@ -8,11 +8,17 @@ html, body { margin: 0; padding: 0; text-align: center; text-decoration: none; o
 
 a { text-decoration: none; color: #000; font-size: 13px; display: inline-block; padding: 7px; }
 
-.header { display: flex; justify-content: space-between; align-items: center; background-color: #b2d49f; }
+.header { display: flex; justify-content: space-between; align-items: center; background-color: #b2d49f; padding: 10px; }
+
+.header .logo { position: fixed; left: 50%; transform: translateX(-50%); }
+
+.header .logo img { display: block; transition: transform 2s ease; }
+
+.header .logo:active img { transform: rotate(1080deg); }
 
 .header div { display: flex; }
 
-.header div a { text-decoration: none; font-size: 18px; color: #000; display: flex; align-items: center; padding: 10px; margin-right: 10px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
+.header div a { text-decoration: none; font-size: 18px; color: #000; display: flex; align-items: center; padding: 10px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
 
 .header div a:hover { cursor: pointer; background-color: rgba(0, 0, 0, 0.1); }
 

@@ -30,6 +30,19 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: #b2d49f;
+  padding: 10px;
+  .logo {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      display: block;
+      transition: transform 2s ease;
+    }
+    &:active img {
+    transform: rotate(1080deg);
+    }
+  }
   div {
     display: flex;
     a {
@@ -39,9 +52,8 @@ a {
       display: flex;
       align-items: center;
       padding: 10px;
-      margin-right: 10px;
       border-radius: 10px;
-      transition: background-color 0.2s, transform 0.2s;;
+      transition: background-color 0.2s, transform 0.2s;
       &:hover {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.1);
