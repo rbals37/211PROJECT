@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="{% sass_src 'scss/form.scss' %}">
 </head>
 <div class="header">
-  <header>
+  <div>
     <a href="{% url 'main' %}">
-      <img src="{% static 'logo.png' %}" class="account" width="40" height="40">
-    케어링크</a>
-  </header>
-  <nav class="account">
+      <img src="{% static 'logo.png' %}">&nbsp;&nbsp;케어링크
+    </a>
+  </div>
+  <div>
     {% if user.is_authenticated %}
     <a href="{% url 'logout' %}">로그아웃</a>
     {% else %}
-    <a href="{%url 'signup'%}">회원가입</a>
+    <a href="{% url 'signup' %}">회원가입</a>
     <a href="{% url 'login' %}">로그인</a>
     {% endif %}
-  </nav>
+  </div>
 </div>
 {% if user.is_authenticated %}
-  <nav class="navigation">
+  <nav>
     <a href="{% url 'mypage' %}">
       <img src="{% static 'nav-icon/mypage.png' %}">
       <span>마이페이지</span>
@@ -56,7 +56,7 @@
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname;
-    const links = document.querySelectorAll('.navigation a');
+    const links = document.querySelectorAll('nav a');
     links.forEach(link => {
       const linkPath = link.getAttribute('href');
       if (linkPath === currentPath) {
