@@ -8,9 +8,10 @@
 </head>
 <div class="header">
   <div>
-    <a href="{% url 'main' %}">
-      <img src="{% static 'logo.png' %}">&nbsp;&nbsp;케어링크
-    </a>
+    <a href="{% url 'main' %}">케어링크</a>
+  </div>
+  <div class="logo">
+      <img src="{% static 'logo.png' %}" width="40px" height="40px">
   </div>
   <div>
     {% if user.is_authenticated %}
