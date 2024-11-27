@@ -29,12 +29,11 @@ def calendar_view(request,year= None, month = None):
     calendar_html = cal.formatmonth(today.year, today.month)
     
     # 각 날짜 칸에 게시글 제목 추가
-    for post in posts:
-        post_date = post.created_at.day  # 날짜 (1~31)
-        # HTML에서 특정 날짜를 <a> 링크로 감싸기
+    for day in range(1, 32):  # 1일부터 31일까지 모든 날짜 처리
+        search_date = f">{day}<" # 날짜 형식 맞추기
         calendar_html = calendar_html.replace(
-            f">{post_date}<",
-            f"><a href='/posts/{today.year}-{today.month:02d}-{post_date:02d}/'>{post_date}</a><br>{post.title}<"
+            search_date,
+            f"><a href='{today.year}-{today.month:02d}-{day:02d}/'>{day}</a><"
         )
     
     context = {
