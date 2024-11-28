@@ -4,6 +4,7 @@
   border-radius: 20px;
   width: 300px;
   margin: 50px auto;
+  text-decoration: none;
   form {
     flex-direction: column;
     text-align: left;
@@ -19,9 +20,11 @@
     box-sizing: border-box;
     display: block;
     transition: transform 0.3s;
+    text-decoration: none;
   }
   button, a {
     background-color: #000;
+    text-decoration: none;
     color: #fff;
     cursor: pointer;
     &:active {
