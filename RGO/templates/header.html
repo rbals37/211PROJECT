@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{% sass_src 'scss/form.scss' %}">
 </head>
 <div class="header">
+<div class="auth-header">
   <div>
     <a href="{% url 'main' %}">케어링크</a>
   </div>
@@ -23,7 +24,7 @@
     {% endif %}
   </div>
 </div>
-{% if user.is_authenticated %}
+  {% if user.is_authenticated %}
   <nav>
     <a href="{% url 'mypage' %}">
       <img src="{% static 'nav-icon/mypage.png' %}">
@@ -55,17 +56,36 @@
     </a>
   </nav>
 {% endif %}
+</div>
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname;
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-      const linkPath = link.getAttribute('href');
-      if (linkPath === currentPath) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
+window.addEventListener('DOMContentLoaded', () => {
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+  links.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
+});
+let clickCount = 0;
+const logo = document.querySelector('.logo img');
+const targetURL = 'https://youtube.com/@dude_sk?si=yhwziBZz6AVqSnWi';
+let timer;
+logo.addEventListener('click', () => {
+  clickCount++;
+  if (timer) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(() => {
+    clickCount = 0;
+  }, 10000);
+  if (clickCount === 10) {
+    window.open(targetURL, '_blank');
+    clickCount = 0;
+    clearTimeout(timer);
+  }
+});
 </script>

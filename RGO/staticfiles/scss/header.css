@@ -6,27 +6,25 @@ html, body { margin: 0; padding: 0; text-align: center; text-decoration: none; o
 
 ::-webkit-scrollbar { display: none; }
 
-a { text-decoration: none; color: #000; font-size: 13px; display: inline-block; padding: 7px; }
+.auth-header { display: flex; justify-content: space-between; align-items: center; background-color: #b2d49f; padding: 10px; }
 
-.header { display: flex; justify-content: space-between; align-items: center; background-color: #b2d49f; padding: 10px; }
+.auth-header .logo { position: sticky; left: 50%; transform: translateX(-50%); }
 
-.header .logo { position: fixed; left: 50%; transform: translateX(-50%); }
+.auth-header .logo img { display: block; transition: transform 2s ease; }
 
-.header .logo img { display: block; transition: transform 2s ease; }
+.auth-header .logo:active img { transform: rotate(1080deg); }
 
-.header .logo:active img { transform: rotate(1080deg); }
+.auth-header div { display: flex; }
 
-.header div { display: flex; }
+.auth-header div a { text-decoration: none; color: #000; font-size: 13px; display: inline-block; padding: 7px; text-decoration: none; font-size: 18px; color: #000; display: flex; align-items: center; padding: 10px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
 
-.header div a { text-decoration: none; font-size: 18px; color: #000; display: flex; align-items: center; padding: 10px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
+.auth-header div a:hover { cursor: pointer; background-color: rgba(0, 0, 0, 0.1); }
 
-.header div a:hover { cursor: pointer; background-color: rgba(0, 0, 0, 0.1); }
-
-.header div a:active { transform: scale(0.85); }
+.auth-header div a:active { transform: scale(0.85); }
 
 nav { display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background-color: #dabdad; gap: 5px; }
 
-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
+nav a { text-decoration: none; color: #000; font-size: 13px; display: inline-block; padding: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
 
 nav a:hover { cursor: pointer; background-color: rgba(0, 0, 0, 0.1) !important; }
 

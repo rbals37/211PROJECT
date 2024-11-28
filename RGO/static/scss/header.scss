@@ -18,21 +18,15 @@ html, body {
 ::-webkit-scrollbar {
   display: none;
 }
-a {
-  text-decoration: none;
-  color: #000;
-  font-size: 13px;
-  display: inline-block;
-  padding: 7px;
-}
-.header {
+
+.auth-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #b2d49f;
   padding: 10px;
   .logo {
-    position: fixed;
+    position: sticky;
     left: 50%;
     transform: translateX(-50%);
     img {
@@ -46,6 +40,11 @@ a {
   div {
     display: flex;
     a {
+      text-decoration: none;
+      color: #000;
+      font-size: 13px;
+      display: inline-block;
+      padding: 7px;
       text-decoration: none;
       font-size: 18px;
       color: #000;
@@ -73,6 +72,11 @@ nav {
   background-color: #dabdad;
   gap: 5px;
   a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    display: inline-block;
+    padding: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;

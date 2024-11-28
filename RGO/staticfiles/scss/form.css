@@ -1,10 +1,10 @@
-.form { padding: 20px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); border-radius: 20px; width: 300px; margin: 50px auto; }
+.form { padding: 20px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); border-radius: 20px; width: 300px; margin: 50px auto; text-decoration: none; }
 
 .form form { flex-direction: column; text-align: left; }
 
-.form input, .form p, .form button, .form a { width: 100%; padding: 12px; margin-top: 20px; border: 0; border-radius: 10px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); font-size: 16px; box-sizing: border-box; display: block; transition: transform 0.3s; }
+.form input, .form p, .form button, .form a { width: 100%; padding: 12px; margin-top: 20px; border: 0; border-radius: 10px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); font-size: 16px; box-sizing: border-box; display: block; transition: transform 0.3s; text-decoration: none; }
 
-.form button, .form a { background-color: #000; color: #fff; cursor: pointer; }
+.form button, .form a { background-color: #000; text-decoration: none; color: #fff; cursor: pointer; }
 
 .form button:active, .form a:active { transform: scale(0.9); }
 
