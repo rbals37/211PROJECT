@@ -21,6 +21,7 @@
   {% else %}
       <p>해당 날짜에 작성된 기록이 없습니다.</p>
   {% endif %}
+  <a href="{% url 'write' %}">글쓰기</a>
   {% include 'footer.html' %}
 </body>
 </html>
