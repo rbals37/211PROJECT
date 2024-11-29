@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "SejongGeulggot";
+  src: url("/static/font/SejongGeulggot.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "SejongGeulggot", sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

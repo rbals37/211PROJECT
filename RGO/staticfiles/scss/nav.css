@@ -1,0 +1,19 @@
+nav { display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background-color: #dabdad; gap: 5px; }
+
+nav a { text-decoration: none; color: #000; font-size: 13px; display: inline-block; padding: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; transition: background-color 0.2s, transform 0.2s; }
+
+nav a:hover { cursor: pointer; background-color: rgba(0, 0, 0, 0.1) !important; }
+
+nav a:active { transform: scale(0.85); }
+
+nav a img { width: 30px; height: 30px; }
+
+nav a span { margin-top: 5px; }
+
+nav a:nth-child(1) img { transform: translateX(1px); }
+
+nav a:nth-child(4) img { transform: translateX(3px); }
+
+nav a.active { background-color: rgba(0, 0, 0, 0.05); }
+
+/*# sourceMappingURL=nav.css.map */
