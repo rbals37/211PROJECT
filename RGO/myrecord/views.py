@@ -37,7 +37,7 @@ def calendar_view(request,year= None, month = None):
             search_date,
             f"><a href='record/{today.year}-{today.month:02d}-{day:02d}/'>{day}</a><"
         )
-    
+
     context = {
         'calendar_html': calendar_html,
         'year': year,
