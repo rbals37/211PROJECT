@@ -6,6 +6,8 @@
 
 #calendar table a { text-decoration: none; color: #000; font-size: 14px; display: inline-block; padding: 10px; }
 
-#calendar a { text-decoration: none; color: #000; font-size: 14px; display: inline-block; padding: 10px; }
+#calendar table a { text-decoration: none; color: #000; font-size: 14px; display: inline-block; padding: 10px; }
+
+#calendar table a { text-decoration: none; color: #000; font-size: 14px; display: inline-block; padding: 10px; }
 
 /*# sourceMappingURL=calendar.css.map */
