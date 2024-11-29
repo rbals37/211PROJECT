@@ -31,18 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #local apps
+    # Local apps
     'main',
     'login',
     'signup',
     'mypage',
     'myrecord',
 
-    #Third party apps
+    # Third-party apps
     'django_extensions',
     'sass_processor',
-    
-    #Django apps
+    'django_browser_reload',
+
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
