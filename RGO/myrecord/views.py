@@ -40,8 +40,6 @@ def record_by_date(request, date):
         'day': date_day
     })
 
-
-@login_required
 def calendar_view(request, year=None, month=None):
     today = datetime.today()
     posts = Post.objects.filter(created_at__year=today.year, created_at__month=today.month)
