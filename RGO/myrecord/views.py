@@ -68,15 +68,26 @@ def calendar_view(request, year=None, month=None):
     return render(request, 'myrecord.html', context)
 
 
-def record_write(request):
+@login_required
+def record_write(request, date):
+    # URL에서 받은 날짜를 파싱
+    initial_date = None
+    try:
+        initial_date = datetime.strptime(date, '%Y-%m-%d').date()
+    except ValueError:
+        return redirect('myrecord')  # 잘못된 날짜 형식이라면 캘린더로 이동
+
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user  # 작성자를 현재 로그인한 사용자로 설정
+            post.author = request.user  # 작성자 설정
+            post.created_at = initial_date  # 글 작성 날짜 설정
             post.save()
-            return redirect('myrecord')  # 게시글 목록으로 리디렉션
+            return redirect('record_by_date', date=initial_date)
     else:
-        form = PostForm()
-    
-    return render(request, 'create_record.html', {'form': form})
+        # 폼 초기값 설정
+        form = PostForm(initial={'created_at': initial_date})
+
+    return render(request, 'create_record.html', {'form': form, 'date': initial_date})
+
