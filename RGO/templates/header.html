@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{% sass_src 'scss/header.scss' %}"/>
   <link rel="stylesheet" href="{% sass_src 'scss/form.scss' %}">
 </head>
-<div class="header">
+{% comment %} 헤더 {% endcomment %}
 <div class="auth-header">
   <div>
     <a href="{% url 'main' %}">케어링크</a>
@@ -26,39 +26,39 @@
     {% endif %}
   </div>
 </div>
-  {% if user.is_authenticated %}
-  <nav>
-    <a href="{% url 'mypage' %}">
-      <img src="{% static 'nav-icon/mypage.png' %}">
-      <span>마이페이지</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-icon/cash.png' %}">
-      <span>캐시현황</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-icon/store.png' %}">
-      <span>스토어</span>
-    </a>
-    <a href="{% url 'myrecord' %}">
-      <img src="{% static 'nav-icon/myrecord.png' %}">
-      <span>나의기록</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-icon/friends.png' %}">
-      <span>친구</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-icon/community.png' %}">
-      <span>커뮤니티</span>
-    </a>
-    <a href="#">
-      <img src="{% static 'nav-icon/mission.png' %}">
-      <span>그룹미션</span>
-    </a>
-  </nav>
+{% comment %} 내비게이션 {% endcomment %}
+{% if user.is_authenticated %}
+<nav>
+  <a href="{% url 'mypage' %}">
+    <img src="{% static 'nav-icon/mypage.png' %}">
+    <span>마이페이지</span>
+  </a>
+  <a href="#">
+    <img src="{% static 'nav-icon/cash.png' %}">
+    <span>캐시현황</span>
+  </a>
+  <a href="#">
+    <img src="{% static 'nav-icon/store.png' %}">
+    <span>스토어</span>
+  </a>
+  <a href="{% url 'myrecord' %}">
+    <img src="{% static 'nav-icon/myrecord.png' %}">
+    <span>나의기록</span>
+  </a>
+  <a href="#">
+    <img src="{% static 'nav-icon/friends.png' %}">
+    <span>친구</span>
+  </a>
+  <a href="#">
+    <img src="{% static 'nav-icon/community.png' %}">
+    <span>커뮤니티</span>
+  </a>
+  <a href="#">
+    <img src="{% static 'nav-icon/mission.png' %}">
+    <span>그룹미션</span>
+  </a>
+</nav>
 {% endif %}
-</div>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;

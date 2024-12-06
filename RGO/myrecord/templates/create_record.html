@@ -12,12 +12,14 @@
 <body>
   {% include 'header.html' %}
   <h1>글쓰기</h1>
-
-<form method="post">
+<div class="form">
+  <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">저장</button>
+    <button class="form" type="submit">저장</button>
 </form>
+</div>
+
   {% include 'footer.html' %}
 </body>
 </html>
