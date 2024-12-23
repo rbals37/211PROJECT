@@ -30,7 +30,7 @@ def record_by_date(request, date):
     date_year = date_obj.year
     date_month = date_obj.month
     date_day = date_obj.day
-    posts = Post.objects.filter(created_at__date=date_obj)
+    posts = Post.objects.filter(created_at__date=date_obj, author=request.user)
 
     return render(request, 'record_by_date.html', {
         'posts': posts,
