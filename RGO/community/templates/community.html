@@ -1,0 +1,30 @@
+{% load static %}
+{% load sass_tags %}
+{% load django_browser_reload %}
+{% django_browser_reload_script %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <main>
+    <h2>게시글 목록</h2>
+    <a href="{% url 'post_create' %}" class="create-post">글쓰기</a>
+    <ul>
+      {% for post in posts %}
+        <li>
+          <a href="{% url 'post_detail' post.id %}" class="post-link">{{ post.title }}</a> 
+          - {{ post.author.student_id }} {{ post.author.name }} ({{ post.created_at|date:"Y-m-d H:i" }})
+        </li>
+      {% empty %}
+        <li>게시글이 없습니다.</li>
+      {% endfor %}
+    </ul>
+  </main>
+  {% include 'footer.html' %}
+</body>
+</html>
