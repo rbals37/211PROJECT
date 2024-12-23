@@ -1,0 +1,23 @@
+{% load static %}
+{% load sass_tags %}
+{% load django_browser_reload %}
+{% django_browser_reload_script %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <main>
+    <h2>{{ post.title }}</h2>
+    <p><strong>작성자:</strong> {{ post.author.student_id }} {{ post.author.name }}</p>
+    <p><strong>작성일자:</strong> {{ post.created_at }}</p>
+    <p class="post-content">{{ post.content }}</p> <!-- 여기에 class 추가 -->
+    <a href="{% url 'community' %}">목록으로 돌아가기</a>
+  </main>  
+  {% include 'footer.html' %}
+</body>
+</html>
