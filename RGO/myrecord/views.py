@@ -63,6 +63,7 @@ def calendar_view(request, year=None, month=None):
         'calendar_html': calendar_html,
         'year': year,
         'month': month,
+        'posts':posts,
     }
 
     return render(request, 'myrecord.html', context)

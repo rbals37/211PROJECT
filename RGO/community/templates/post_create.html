@@ -1,0 +1,24 @@
+{% load static %}
+{% load sass_tags %}
+{% load django_browser_reload %}
+{% django_browser_reload_script %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <h1>글쓰기</h1>
+<div class="form">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="form" type="submit">저장</button>
+</form>
+</div>
+  {% include 'footer.html' %}
+</body>
+</html>

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'signup',
     'mypage',
     'myrecord',
+    'community',
 
     # Third-party apps
     'django_extensions',
