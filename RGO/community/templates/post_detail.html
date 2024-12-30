@@ -9,13 +9,13 @@
 </head>
 <body>
   {% include 'header.html' %}
-  <main>
+  <div class="post">
     <h2>{{ post.title }}</h2>
     <p><strong>작성자:</strong> {{ post.author.student_id }} {{ post.author.name }}</p>
     <p><strong>작성일자:</strong> {{ post.created_at }}</p>
     <p class="post-content">{{ post.content }}</p> <!-- 여기에 class 추가 -->
     <a href="{% url 'community' %}">목록으로 돌아가기</a>
-  </main>  
+  </div>  
   {% include 'footer.html' %}
 </body>
 </html>

@@ -1,31 +1,33 @@
-#calendar {
+.calendar {
   table { // 전체 테이블 스타일
     width: 100%;
     border-collapse: collapse;
     text-decoration: none;
+
     th { // 년, 월, 요일
-      text-decoration: none;
       text-align: center;
       border: 1px solid #ccc;
-      padding: 10px;
+      padding: 15px;
+      font-size: 20px;
     }
-    td { // 일
-      text-decoration: none;
+
+    td { // 날짜 셀 스타일
       width: 100px;
       height: 100px;
-      text-align: left;
-      vertical-align: top;
       border: 1px solid #ccc;
-    }
-    a { // a태그 스타일
-      text-decoration: none;
-      color: #000;
-      font-size: 14px;
-      display: inline-block;
-      padding: 10px;
-      &.hover {
-        color: #fff;
+      position: relative; // 자식 a 태그 위치 설정
+      
+      a { // a태그 스타일
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        display: block; // 블록 요소로 변경
+        width: 100%; // td 전체를 감싸도록 설정
+        height: 100%; // td 전체를 감싸도록 설정
+        box-sizing: border-box; // 패딩 포함 크기 계산
+        padding: 10px;
+        text-align: left;
+        }
       }
     }
   }
-}

@@ -9,7 +9,7 @@
 </head>
 <body>
   {% include 'header.html' %}
-  <main>
+  <div class="post">
     <h2>게시글 목록</h2>
     <a href="{% url 'post_create' %}" class="create-post">글쓰기</a>
     <ul>
@@ -22,7 +22,7 @@
         <li>게시글이 없습니다.</li>
       {% endfor %}
     </ul>
-  </main>
+  </div>
   {% include 'footer.html' %}
 </body>
 </html>

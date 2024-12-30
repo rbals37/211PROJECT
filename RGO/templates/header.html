@@ -7,7 +7,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% sass_src 'scss/header.scss' %}"/>
-
 </head>
 {% comment %} 헤더 {% endcomment %}
 <div class="auth-header">
@@ -72,6 +71,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+{% comment %} 이스터에그 {% endcomment %}
+
 let clickCount = 0;
 const logo = document.querySelector('.logo img');
 const targetURL = 'https://youtube.com/@dude_sk?si=yhwziBZz6AVqSnWi';
