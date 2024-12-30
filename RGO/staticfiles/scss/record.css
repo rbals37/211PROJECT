@@ -1,0 +1,7 @@
+li { list-style: none; margin-left: 25%; padding: 0; display: flex; align-items: center; gap: 10px; text-align: left; }
+
+.title { font-size: 24px; font-weight: bold; color: #222; padding-right: 10px; }
+
+p.content { font-size: 18px; color: #555; background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+
+/*# sourceMappingURL=record.css.map */
