@@ -6,15 +6,16 @@
 <html>
 <head>
   <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
   {% include 'header.html' %}
-    <div class="post">
+    <div class="form">
       <h1>글쓰기</h1>
       <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">저장</button>
+        <button type="submit" class="button">저장</button>
       </form>
     </div>
   {% include 'footer.html' %}

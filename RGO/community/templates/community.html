@@ -6,20 +6,19 @@
 <html>
 <head>
   <title>커뮤니티</title>
+  <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
   {% include 'header.html' %}
   <div class="post">
     <h2>게시글 목록</h2>
-    <a href="{% url 'post_create' %}" class="create-post">글쓰기</a>
+    <a href="{% url 'post_create' %}" class="button">글쓰기</a>
     <ul>
       {% for post in posts %}
         <li>
           <a href="{% url 'post_detail' post.id %}" class="post-link">{{ post.title }}</a> 
           - {{ post.author.student_id }} {{ post.author.name }} ({{ post.created_at|date:"Y-m-d H:i" }})
         </li>
-      {% empty %}
-        <li>게시글이 없습니다.</li>
       {% endfor %}
     </ul>
   </div>

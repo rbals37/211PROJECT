@@ -15,10 +15,9 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="form" type="submit">저장</button>
+    <button class="button" type="submit">저장</button>
 </form>
 </div>
-
   {% include 'footer.html' %}
 </body>
 </html>
