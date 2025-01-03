@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% sass_src 'scss/header.scss' %}"/>
 </head>
-{% comment %} 헤더 {% endcomment %}
 <div class="auth-header">
   <div>
     <a href="{% url 'main' %}">케어링크</a>
@@ -25,7 +24,6 @@
     {% endif %}
   </div>
 </div>
-{% comment %} 내비게이션 {% endcomment %}
 {% if user.is_authenticated %}
 <nav>
   <a href="{% url 'mypage' %}">
@@ -70,26 +68,5 @@ window.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active');
     }
   });
-});
-
-{% comment %} 이스터에그 {% endcomment %}
-
-let clickCount = 0;
-const logo = document.querySelector('.logo img');
-const targetURL = 'https://youtube.com/@dude_sk?si=yhwziBZz6AVqSnWi';
-let timer;
-logo.addEventListener('click', () => {
-  clickCount++;
-  if (timer) {
-    clearTimeout(timer);
-  }
-  timer = setTimeout(() => {
-    clickCount = 0;
-  }, 10000);
-  if (clickCount === 10) {
-    window.open(targetURL, '_blank');
-    clickCount = 0;
-    clearTimeout(timer);
-  }
 });
 </script>
