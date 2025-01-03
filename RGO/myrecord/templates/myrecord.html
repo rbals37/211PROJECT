@@ -11,7 +11,10 @@
 </head>
 <body>
   {% include 'header.html' %}
-    <div id="calendar">
+
+{% comment %} CalendarHTML {% endcomment %}
+
+    <div class="calendar">
         {{ calendar_html|safe }} 
     </div>
 

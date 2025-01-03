@@ -1,3 +1,5 @@
+// 헤더, 내비게이션, 폰트 세팅 등
+
 @font-face {
   font-family: "SejongGeulggot";
   src: url("/static/font/SejongGeulggot.otf");
@@ -7,17 +9,15 @@
 * {
   font-family: "SejongGeulggot", sans-serif;
 }
-html, body {
-  margin: 0;
-  padding: 0;
+
+body {
   text-align: center;
   text-decoration: none;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
+// 헤더 코드
 
 .auth-header {
   display: flex;
@@ -63,6 +63,9 @@ html, body {
     }
   }
 }
+
+// 내비게이션 코드
+
 nav {
   display: flex;
   justify-content: center;
@@ -109,4 +112,10 @@ nav {
       background-color: rgba(0, 0, 0, 0.05);
     }
   }
+}
+
+/* li에서 불릿 스타일 제거 */
+
+li {
+  list-style: none;
 }

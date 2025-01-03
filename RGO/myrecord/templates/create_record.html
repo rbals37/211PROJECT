@@ -6,7 +6,6 @@
 <html>
 <head>
   <title>나의기록</title>
-  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
   <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
@@ -16,10 +15,9 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="form" type="submit">저장</button>
+    <button class="button" type="submit">저장</button>
 </form>
 </div>
-
   {% include 'footer.html' %}
 </body>
 </html>

@@ -7,7 +7,7 @@ from .forms import PostForm
 
 # 한글화된 HTMLCalendar 클래스 추가
 class KoreanHTMLCalendar(calendar.HTMLCalendar):
-    KOREAN_WEEKDAYS = ['월', '화', '수', '목', '금', '토', '일']
+    KOREAN_WEEKDAYS = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
     KOREAN_MONTHS = ['1월', '2월', '3월', '4월', '5월', '6월',
                      '7월', '8월', '9월', '10월', '11월', '12월']
 

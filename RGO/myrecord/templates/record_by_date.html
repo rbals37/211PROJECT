@@ -6,7 +6,6 @@
 <html>
 <head>
   <title>나의기록</title>
-  <link rel="stylesheet" href="{% sass_src 'scss/calendar.scss' %}">
   <link rel="stylesheet" href="{% sass_src 'scss/myrecord.scss' %}">
 </head>
 <body>
@@ -24,7 +23,7 @@
   {% else %}
       <p>해당 날짜에 작성된 기록이 없습니다.</p>
   {% endif %}
-  <a href="{% url 'write' date|date:'Y-m-d' %}" class="btn btn-primary">
+  <a href="{% url 'write' date|date:'Y-m-d' %}" class="button">
     글 작성하기
 </a>
 {% include 'footer.html' %}
