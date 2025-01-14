@@ -1,9 +1,0 @@
-#calendar table { width: 100%; border-collapse: collapse; text-decoration: none; }
-
-#calendar table th { text-decoration: none; text-align: center; border: 1px solid #ccc; padding: 10px; }
-
-#calendar table td { text-decoration: none; width: 100px; height: 100px; text-align: left; vertical-align: top; border: 1px solid #ccc; }
-
-#calendar table a { text-decoration: none; color: #000; font-size: 14px; display: inline-block; padding: 10px; }
-
-/*# sourceMappingURL=calendar.css.map */

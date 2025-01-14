@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
 import os
 SASS_OUTPUT_STYLE = 'compact'
 SASS_PROCESSOR_ENABLED = True
