@@ -11,8 +11,8 @@ def main():
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
-            "가상환경 좀 켜라"
-            "명령어 : source venv/bin/activate"
+            "가상환경 좀 켜라\n"
+            "             명령어 : source venv/bin/activate"
         ) from exc
     execute_from_command_line(sys.argv)
 
