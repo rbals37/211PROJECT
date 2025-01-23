@@ -119,3 +119,16 @@ nav {
 li {
   list-style: none;
 }
+
+// 캔버스 태그
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* 캔버스를 다른 요소와 같은 레이어로 이동 */
+  pointer-events: none; /* 다른 요소에 마우스 이벤트를 전달 */
+}
+
